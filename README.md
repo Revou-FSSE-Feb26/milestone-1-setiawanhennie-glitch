@@ -66,16 +66,8 @@ The site is designed to be lightweight, easy to navigate, and serves as a founda
 
 ---
 
-## Instructions for Accessing & Using the Website
+## Instructions for Accessing the Website
 
 ### 🌐 Accessing the Deployed Page
 The website is hosted live on the web. You can access it via the following link:
-- **Live URL**: [Upcoming]
-
-> **Note**: If you are viewing this repository locally, the live link may not be active yet. Please refer to the "Local Access" instructions below.
-
-### 💻 Local Access
-To view the website on your local machine:
-1. **Clone or Download** the repository to your computer.
-2. **Locate** the `hennie_portfolio.html` file in the root directory.
-3. **Open** the file using any modern web browser (Chrome, Firefox, Safari, Edge).
+- **Live URL**: [https://revou-fsse-feb26.github.io/milestone-1-setiawanhennie-glitch/]
