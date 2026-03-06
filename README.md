@@ -66,7 +66,15 @@ The site is designed to be lightweight, easy to navigate, and serves as a founda
 
 ---
 
-## 🌐 Instruction for Accessing the Website
+## 🌐 Instruction for Accessing & Using the Website
 
 The website is hosted live, please access it via the following link:
 - **Live URL**: [https://revou-fsse-feb26.github.io/milestone-1-setiawanhennie-glitch/]
+
+Once the website is open, visitors can interact with it as follows:
+1. **Navigation**: Use the fixed menu at the top-right corner to jump between **About Me**, **Projects**, and **Contact** sections.
+2. **View Projects**: Click the **🔗 View** links under the Projects section to see code repositories or live demos.
+3. **Contact**: 
+   - Click the **Email**, **LinkedIn**, or **GitHub** icons to open respective platforms.
+   - Fill out the **Contact Form** (Name, Email,Birthday, and Message) and click **Submit** to send
+4. **Responsive View**: Resize the browser window to view how the layout adapts to different screen sizes.
