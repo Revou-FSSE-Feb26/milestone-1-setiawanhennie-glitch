@@ -66,8 +66,7 @@ The site is designed to be lightweight, easy to navigate, and serves as a founda
 
 ---
 
-## Instructions for Accessing the Website
+## 🌐 Instruction for Accessing the Website
 
-### 🌐 Accessing the Deployed Page
-The website is hosted live on the web. You can access it via the following link:
+The website is hosted live, please access it via the following link:
 - **Live URL**: [https://revou-fsse-feb26.github.io/milestone-1-setiawanhennie-glitch/]
