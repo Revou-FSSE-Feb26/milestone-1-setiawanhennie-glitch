@@ -1,0 +1,50 @@
+/* Home Section */
+#home {
+    padding-top: 60px;
+    display: inline-flex; 
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-image {
+    flex-shrink: 0;
+
+}
+
+.home-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Navigation */
+header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px 25px 25px;
+    background-color: #2c3e50;
+    border-radius: 0 0 0 10px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: white;
+
+}
+
+/* Contact Section */
+#contact ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
