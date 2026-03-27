@@ -8,22 +8,21 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="#about"><b>About Me</b></a></li>
-            <li><a href="#projects"><b>Projects</b></a></li>
-            <li><a href="#contact"><b>Contact</b></a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about"><b>About Me</b></a></li>
+                <li><a href="#projects"><b>Projects</b></a></li>
+                <li><a href="#contact"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main id="main-content">
-        <!-- Home Section -->
         <section id="home">
             <img class="home-image" src="./my_pic1.JPG" alt="Profile photo of Hennie" width="215">
             <div class="home-content">
-                <h1>Hi, I'm Hennie!🤗</h1> 
+                <h1 class="gradient-heading">Hi, I'm Hennie! <span class="emoji">🤗</span></h1>
                 <p><strong>An Aspiring Software Engineer</strong></p> 
                 <p>A self-driven and adaptable individual with a background in biotechnology, currently transitioning into tech.</p>
                 <p>I'm committed to building impactful websites and continuously expanding my skillset everyday.</p>
@@ -35,51 +34,78 @@
 
         <!-- About Me Section -->
         <section id="about">
+        <div class="container">
             <h2>About Me</h2>
-            <p>Simply just an ordinary girl who is aspiring to be a software engineer in the future.</p>
-            <p>After joining a workshop related to tech, I realized I like creating things that people can actually use. So here I am—learning to code, one bug at a time😅</p>
-            <p>Right now, I'm growing my skills through the RevoU bootcamp. It's challenging, but fun, and exactly what I needed!</p>
-        </section>
+            
+            <div class="about-intro">
+                <p>Simply just an ordinary girl who is aspiring to be a software engineer in the future.</p>
+                <p>After joining a workshop related to tech, I realized I like creating things that people can actually use. So here I am—learning to code, one bug at a time😅</p>
+                <p>Right now, I'm growing my skills through the RevoU bootcamp. It's challenging, but fun, and exactly what I needed!</p>
+            </div>
 
-        <!-- Background & Skills Section -->
-        <section id="background">
-            <h3>🎓 Background</h3>
-            <ul>
-                <li>
-                    <strong>Education:</strong> i3L University (BSc. Biotechnology, 2022)
-                </li>
-                <li>
-                    <strong>Work:</strong> Cryocord Indonesia (Biotechnologist)
-                </li>
-                <li>
-                    <strong>Current Focus:</strong> RevoU Full Stack Bootcamp
-                </li>
-            </ul>
+            <!-- Technical Skills -->
+            <article class="about-card">
+                <h3>💻 Technical Skills</h3>
+                <p>Currently learning and playing around with:</p>
+                <ul class="skills-list">
+                <li>HTML</li>
+                <li>Streamlit</li>
+                <li>Python</li>
+                <li>R</li>
+                <li>Google Colab</li>
+                <li>Git & GitHub</li>
+                <li>Google Suite</li>
+                <li>Microsoft Office</li>
+                </ul>
+            </article>
 
-            <h3>💻 Technical Skills</h3>
-            <p>Currently learning and playing around with:</p>
-            <ul>
-                <li><strong>Web:</strong> HTML, Streamlit, <em>(more to come)</em></li>
-                <li><strong>Programming:</strong> Python, R, Google Colab</li>
-                <li><strong>Tools:</strong> Git, GitHub, Google Suite, Microsoft Office</li>
-            </ul>
+            <!-- Background -->
+            <article class="about-card full-width">
+                <h3>🎓 Background & Experience</h3>
+                <div class="background-grid">
+                <div class="background-item">
+                    <strong>Education</strong>
+                    <span>i3L University | BSc. Biotechnology, 2022</span>
+                    <p>Built a strong foundation in scientific research and data analysis.</p>
+                </div>
+                <div class="background-item">
+                    <strong>Work Experience</strong>
+                    <span>Cryocord Indonesia | Biotechnologist</span>
+                    <p>Developed precision, analytical thinking, and teamwork in a fast-paced lab environment.</p>
+                </div>
+                <div class="background-item">
+                    <strong>Current Focus</strong>
+                    <span>RevoU Full Stack Bootcamp</span>
+                    <p>Transitioning into tech by mastering modern web development tools and practices.</p>
+                </div>
+                </div>
+            </article>
 
-            <h3>💬 Non-Technical Skills</h3>
-            <p>Soft-skills I've developed through my working days:</p>
-            <ul>
-                <li><strong>Analytical Thinking:</strong> Solving complex problems logically</li>
-                <li><strong>Precision:</strong> Attention to detail</li>
-                <li><strong>Adaptability:</strong> Comfortable learning new tools and knowledge quickly</li>
-                <li><strong>Teamwork:</strong> Collaborating in fast-paced environments with co-workers</li>
-            </ul>
+            <!-- Soft Skills -->
+            <article class="about-card">
+                <h3>💬 Soft Skills</h3>
+                <ul class="skills-list">
+                <li>Analytical Thinking</li>
+                <li>Precision & Detail</li>
+                <li>Adaptability</li>
+                <li>Teamwork</li>
+                <li>Problem Solving</li>
+                <li>Quick Learner</li>
+                </ul>
+            </article>
 
-            <h3>✨ Personal Interests</h3>
-            <p>Things that I would do when I'm not working:</p>
-            <ul>
-                <li>Enjoy watching movies online</li>
-                <li>Read self-help books</li>
-                <li>Learn new languages</li>
-            </ul>
+            <!-- Personal Interests -->
+            <article class="about-card">
+                <h3>✨ Personal Interests</h3>
+                <p>Things I do when I'm not coding:</p>
+                <ul class="skills-list">
+                <li>Watching movies</li>
+                <li>Reading self-help books</li>
+                <li>Learning new languages</li>
+                </ul>
+            </article>
+            </div>
+        </div>
         </section>
     
         <hr>
