@@ -35,6 +35,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
   scroll-snap-type: y mandatory;
+  scroll-padding-bottom: 2rem;
 }
 
 body {
@@ -53,9 +54,13 @@ body {
   background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 3rem;
   padding-top: 3rem;
+  min-height: auto;
+  height: 22rem;
+  padding-bottom: 3rem;
 }
 
 #about {
@@ -100,7 +105,7 @@ h1 {
   animation: 
     typewriter 3.5s steps(30) forwards,
     blinkCursor 0.75s step-end forwards,
-    gradientFlow 8s ease infinite;
+    gradientFlow 12s ease infinite;
 }
 
 @keyframes typewriter {
@@ -267,6 +272,7 @@ nav a::after {
 
 /*Home Section*/
 .home-image {
+  flex-shrink: 0;
   width: clamp(180px, 30vw, 215px);
   height: auto;
   border-radius: 50%;
@@ -274,14 +280,14 @@ nav a::after {
   border: 4px solid var(--bg-card);
   box-shadow: var(--shadow-lg);
   transition: var(--transition);
-  flex-shrink: 0;
   position: relative;
   animation: floatImage 6s ease-in-out infinite;
+  max-width: 100%;  
 }
 
 @keyframes floatImage {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1deg); }
+  50% { transform: translateY(12px) rotate(1deg); }
 }
 
 .home-image:hover {
@@ -293,6 +299,7 @@ nav a::after {
 .home-content {
   flex: 1;
   min-width: 0;
+  width: 100%;
 }
 
 .home-content h1 {
@@ -647,7 +654,7 @@ input[type="submit"]:active {
   transform: translateY(0);
 }
 
-/* ----- Footer ----- */
+/*Footer*/
 footer {
   text-align: center;
   padding: 2.5rem 2rem 3rem;
@@ -656,6 +663,8 @@ footer {
   border-top: 1px solid var(--border);
   background: var(--bg-card);
   margin-top: 2rem;
+  scroll-snap-align: end;
+  min-height: 20vh;
 }
 
 footer p {
@@ -676,7 +685,7 @@ footer p {
   }
   
   html {
-    scroll-snap-type: y proximity; /* Softer snap on mobile */
+    scroll-snap-type: y proximity; 
   }
   
   nav ul {
@@ -687,7 +696,13 @@ footer p {
   #home {
     flex-direction: column;
     text-align: center;
+    text-align: center;
     padding-top: 2rem;
+    gap: 2rem;
+  }
+
+  .home-image {
+    margin-bottom: 1rem;
   }
   
   .home-content h1 {
