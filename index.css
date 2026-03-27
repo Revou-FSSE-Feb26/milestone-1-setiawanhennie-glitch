@@ -1,9 +1,9 @@
 :root {
   /* Color Palette */
-  --primary: #4f46e5;          
+  --primary: #4f46e5;         
   --primary-hover: #4338ca;
   --secondary: #0ea5e9;        
-  --accent: #f59e0b;           
+  --accent: #f59e0b;         
   
   --bg-body: #f8fafc;
   --bg-card: #ffffff;
@@ -34,6 +34,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -45,6 +46,28 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+}
+
+/*Section Background Colors*/
+#home {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+
+#about {
+  background: #ffffff;
+}
+
+#projects {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+#contact {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
 }
 
 /*Typography*/
@@ -76,7 +99,7 @@ h1 {
   margin: 0 auto;
   animation: 
     typewriter 3.5s steps(30) forwards,
-    blinkCursor 0.75s forwards,
+    blinkCursor 0.75s step-end infinite,
     gradientFlow 8s ease infinite;
 }
 
@@ -140,18 +163,7 @@ h3:hover {
 p { 
   margin-bottom: 1rem; 
   color: var(--text-secondary);
-  animation: slideIn 0.6s ease-out forwards; 
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* Animation removed - section animation handles it */
 }
 
 a {
@@ -196,11 +208,17 @@ main {
 
 section {
   padding: var(--section-padding);
-  max-width: var(--container-max);
+  max-width: 100%;
   margin: 0 auto;
   animation: fadeInUp 0.6s ease-out forwards;
   opacity: 0;
   transform: translateY(20px);
+  scroll-snap-align: start;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @keyframes fadeInUp {
@@ -208,23 +226,6 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    var(--primary), 
-    var(--secondary), 
-    var(--accent), 
-    transparent);
-  background-size: 300% 100%;
-  margin: 2.5rem auto;
-  max-width: var(--container-max);
-  border-radius: 2px;
-  animation: gradientFlow 6s linear infinite;
-  position: relative;
 }
 
 /*Header & Navigation*/
@@ -266,13 +267,6 @@ nav a::after {
 }
 
 /*Home Section*/
-#home {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  padding-top: 3rem;
-}
-
 .home-image {
   width: clamp(180px, 30vw, 215px);
   height: auto;
@@ -321,7 +315,7 @@ nav a::after {
   position: relative;
 }
 
-/* Grid Container */
+/*About Section - Grid Layout*/
 #about .about-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -341,7 +335,6 @@ nav a::after {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-top: 1%;
 }
 
 #about .about-card:hover {
@@ -384,7 +377,7 @@ nav a::after {
   color: var(--text-secondary);
 }
 
-/* Skills List*/
+/* Skills List */
 #about .skills-list {
   list-style: none;
   padding: 0;
@@ -414,7 +407,7 @@ nav a::after {
   box-shadow: var(--shadow-sm);
 }
 
-/* Background Grid*/
+/* Background Grid */
 #about .background-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -459,7 +452,19 @@ nav a::after {
 
 #about .about-card.full-width {
   grid-column: 1 / -1;
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.about-intro {
+  max-width: 70ch;
+  margin: 2rem 0 3rem 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.about-intro p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
 }
 
 /*Projects Section*/
@@ -467,7 +472,7 @@ nav a::after {
   background: var(--bg-card);
   border-radius: var(--border-radius);
   padding: 1.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
@@ -550,7 +555,7 @@ nav a::after {
   background: white;
 }
 
-/* ----- Form Styling ----- */
+/*Form Styling*/
 form {
   background: var(--bg-card);
   border-radius: var(--border-radius);
@@ -657,7 +662,7 @@ footer p {
   margin: 0;
 }
 
-/* ----- Responsive Design ----- */
+/*Responsive Design*/
 @media (max-width: 992px) {
   #about .about-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -668,6 +673,10 @@ footer p {
 @media (max-width: 768px) {
   :root {
     --section-padding: 3.5rem 1.5rem;
+  }
+  
+  html {
+    scroll-snap-type: y proximity; /* Softer snap on mobile */
   }
   
   nav ul {
@@ -747,6 +756,7 @@ footer p {
   }
 }
 
+/*Accessibility & Focus States*/
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -754,6 +764,11 @@ footer p {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  
+  html {
+    scroll-snap-type: none;
+  }
+  
   #about .about-card,
   #about .about-card::before,
   #about .skills-list li,
