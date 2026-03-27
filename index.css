@@ -59,7 +59,7 @@ body {
 }
 
 #about {
-  background: #ffffff;
+  background: #fffefe;
 }
 
 #projects {
@@ -99,7 +99,7 @@ h1 {
   margin: 0 auto;
   animation: 
     typewriter 3.5s steps(30) forwards,
-    blinkCursor 0.75s step-end infinite,
+    blinkCursor 0.75s step-end forwards,
     gradientFlow 8s ease infinite;
 }
 
@@ -163,7 +163,6 @@ h3:hover {
 p { 
   margin-bottom: 1rem; 
   color: var(--text-secondary);
-  /* Animation removed - section animation handles it */
 }
 
 a {
@@ -329,6 +328,7 @@ nav a::after {
   border: 1px solid var(--border);
   border-radius: var(--border-radius);
   padding: 2rem;
+  margin-top: 1rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   position: relative;
@@ -456,7 +456,7 @@ nav a::after {
 }
 
 .about-intro {
-  max-width: 70ch;
+  max-width: 100%;
   margin: 2rem 0 3rem 0;
   color: var(--text-secondary);
   line-height: 1.7;
