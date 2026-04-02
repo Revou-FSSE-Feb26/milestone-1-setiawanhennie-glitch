@@ -58,13 +58,15 @@ body {
   align-items: flex-start;
   gap: 3rem;
   padding-top: 3rem;
-  min-height: auto;
-  height: 22rem;
+  min-height: 22rem;
   padding-bottom: 3rem;
 }
 
 #about {
-  background: #fffefe;
+  background: 
+    url('https://images.unsplash.com/photo-1685969116188-ed5ad852a97a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+    no-repeat center center/cover;
+  position: relative;
 }
 
 #projects {
@@ -103,14 +105,13 @@ h1 {
   white-space: nowrap;
   margin: 0 auto;
   animation: 
-    typewriter 3.5s steps(30) forwards,
+    typewriter 3.5s steps(25) forwards,
     blinkCursor 0.75s step-end forwards,
     gradientFlow 12s ease infinite;
 }
 
 @keyframes typewriter {
   0% { width: 0; }
-  50% { width: 100%; }
   100% { width: 100%; }
 }
 
@@ -205,7 +206,6 @@ a:hover::after {
 }
 
 main { 
-  padding-top: 2rem; 
   position: relative; 
   z-index: 1; 
 }
@@ -282,6 +282,7 @@ nav a::after {
   transition: var(--transition);
   position: relative;
   animation: floatImage 6s ease-in-out infinite;
+  will-change: transform;
   max-width: 100%;  
 }
 
@@ -657,12 +658,11 @@ input[type="submit"]:active {
 /*Footer*/
 footer {
   text-align: center;
-  padding: 2.5rem 2rem 3rem;
+  padding: 2.5rem 2rem 2rem;
   color: var(--text-secondary);
   font-size: 0.95rem;
   border-top: 1px solid var(--border);
   background: var(--bg-card);
-  margin-top: 2rem;
   scroll-snap-align: end;
   min-height: 20vh;
 }
@@ -694,8 +694,8 @@ footer p {
   }
   
   #home {
+    background-attachment: scroll;
     flex-direction: column;
-    text-align: center;
     text-align: center;
     padding-top: 2rem;
     gap: 2rem;
@@ -722,6 +722,12 @@ footer p {
   }
   
   /* About Grid Responsive */
+  #about {
+    background-attachment: scroll;
+    background-position: left top !important;
+    background-size: cover !important;
+  }
+
   #about .about-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
