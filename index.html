@@ -32,78 +32,76 @@
 
         <!-- About Me Section -->
         <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            
-            <div class="about-intro">
-                <p>Simply just an ordinary girl who is aspiring to be a software engineer in the future.</p>
-                <p>After joining a workshop related to tech, I realized I like creating things that people can actually use. So here I am—learning to code, one bug at a time😅</p>
-                <p>Right now, I'm growing my skills through the RevoU bootcamp. It's challenging, but fun, and exactly what I needed!</p>
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-intro">
+                    <p>Simply just an ordinary girl who is aspiring to be a software engineer in the future.</p>
+                    <p>After joining a workshop related to tech, I realized I like creating things that people can actually use. So here I am—learning to code, one bug at a time😅</p>
+                    <p>Right now, I'm growing my skills through the RevoU bootcamp. It's challenging, but fun, and exactly what I needed!</p>
+                </div>
+
+                <!-- Technical Skills -->
+                <article class="about-card">
+                    <h3>💻 Technical Skills</h3>
+                    <p>Currently learning and playing around with:</p>
+                    <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>Streamlit</li>
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>Google Colab</li>
+                    <li>Git & GitHub</li>
+                    <li>Google Suite</li>
+                    <li>Microsoft Office</li>
+                    </ul>
+                </article>
+
+                <!-- Background -->
+                <article class="about-card full-width">
+                    <h3>🎓 Background & Experience</h3>
+                    <div class="background-grid">
+                    <div class="background-item">
+                        <strong>Education</strong>
+                        <span>i3L University | BSc. Biotechnology, 2022</span>
+                        <p>Built a strong foundation in scientific research and data analysis.</p>
+                    </div>
+                    <div class="background-item">
+                        <strong>Work Experience</strong>
+                        <span>Cryocord Indonesia | Biotechnologist</span>
+                        <p>Developed precision, analytical thinking, and teamwork in a fast-paced lab environment.</p>
+                    </div>
+                    <div class="background-item">
+                        <strong>Current Focus</strong>
+                        <span>RevoU Full Stack Bootcamp</span>
+                        <p>Transitioning into tech by mastering modern web development tools and practices.</p>
+                    </div>
+                    </div>
+                </article>
+
+                <!-- Soft Skills -->
+                <article class="about-card">
+                    <h3>💬 Soft Skills</h3>
+                    <ul class="skills-list">
+                    <li>Analytical Thinking</li>
+                    <li>Precision & Detail</li>
+                    <li>Adaptability</li>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Quick Learner</li>
+                    </ul>
+                </article>
+
+                <!-- Personal Interests -->
+                <article class="about-card">
+                    <h3>✨ Personal Interests</h3>
+                    <p>Things I do when I'm not coding:</p>
+                    <ul class="skills-list">
+                    <li>Watching movies</li>
+                    <li>Reading self-help books</li>
+                    <li>Learning new languages</li>
+                    </ul>
+                </article>
             </div>
-
-            <!-- Technical Skills -->
-            <article class="about-card">
-                <h3>💻 Technical Skills</h3>
-                <p>Currently learning and playing around with:</p>
-                <ul class="skills-list">
-                <li>HTML</li>
-                <li>Streamlit</li>
-                <li>Python</li>
-                <li>R</li>
-                <li>Google Colab</li>
-                <li>Git & GitHub</li>
-                <li>Google Suite</li>
-                <li>Microsoft Office</li>
-                </ul>
-            </article>
-
-            <!-- Background -->
-            <article class="about-card full-width">
-                <h3>🎓 Background & Experience</h3>
-                <div class="background-grid">
-                <div class="background-item">
-                    <strong>Education</strong>
-                    <span>i3L University | BSc. Biotechnology, 2022</span>
-                    <p>Built a strong foundation in scientific research and data analysis.</p>
-                </div>
-                <div class="background-item">
-                    <strong>Work Experience</strong>
-                    <span>Cryocord Indonesia | Biotechnologist</span>
-                    <p>Developed precision, analytical thinking, and teamwork in a fast-paced lab environment.</p>
-                </div>
-                <div class="background-item">
-                    <strong>Current Focus</strong>
-                    <span>RevoU Full Stack Bootcamp</span>
-                    <p>Transitioning into tech by mastering modern web development tools and practices.</p>
-                </div>
-                </div>
-            </article>
-
-            <!-- Soft Skills -->
-            <article class="about-card">
-                <h3>💬 Soft Skills</h3>
-                <ul class="skills-list">
-                <li>Analytical Thinking</li>
-                <li>Precision & Detail</li>
-                <li>Adaptability</li>
-                <li>Teamwork</li>
-                <li>Problem Solving</li>
-                <li>Quick Learner</li>
-                </ul>
-            </article>
-
-            <!-- Personal Interests -->
-            <article class="about-card">
-                <h3>✨ Personal Interests</h3>
-                <p>Things I do when I'm not coding:</p>
-                <ul class="skills-list">
-                <li>Watching movies</li>
-                <li>Reading self-help books</li>
-                <li>Learning new languages</li>
-                </ul>
-            </article>
-            </div>
-        </div>
         </section>
 
         <!-- Projects Section -->
@@ -152,8 +150,8 @@
                     <input type="date" id="birthday" name="birthday"><br><br>
                     <label for="message">Message:</label><br>
                     <textarea id="message" name="message" 
-                      rows="4" cols="80" required
-                      placeholder="Tell me about yourself!">
+                        placeholder="Tell me about yourself!"  
+                        rows="4" cols="80" required>
                     </textarea><br><br>                    
                     <input type="submit" value="Submit">
                 </fieldset>

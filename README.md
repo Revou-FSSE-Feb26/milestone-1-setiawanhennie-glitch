@@ -39,7 +39,7 @@ The site is designed to be lightweight, easy to navigate, and serves as a founda
   - HTML form with validation: First Name, Last Name, Email, Birthday, and Message
 
 ### UI & Styling
-- Inline CSS for quick prototyping:
+- CSS for quick prototyping:
   - Fixed navigation with dark background and rounded corner
   - Flexbox layout for navigation menu and contact links
   - Table-based layout for home section (profile image + text)
